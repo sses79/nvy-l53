@@ -1,6 +1,7 @@
 <?php
 
-use App\Notifications\LessonPublished;
+//use App\Notifications\LessonPublished;
+use App\Notifications\PaymentRecieved;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,10 @@ use App\Notifications\LessonPublished;
 */
 
 Route::get('/', function () {
-    $user = App\User::first();
+    $admin = App\User::find(1);
+    $user = App\User::find(2);
     
-    $user->notify(new LessonPublished());
+//    $user->notify(new LessonPublished());
+    $admin->notify(new PaymentRecieved($user));
+    
 });
