@@ -1,0 +1,62 @@
+[2016-10-17 10:29:17] production.ERROR: exception 'ErrorException' with message 'file_get_contents(/projects/l53/.env): failed to open stream: No such file or directory' in /projects/l53/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php:57
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_get_conten...', '/projects/l53/v...', 57, Array)
+#1 /projects/l53/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(57): file_get_contents('/projects/l53/....')
+#2 /projects/l53/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(39): Illuminate\Foundation\Console\KeyGenerateCommand->setKeyInEnvironmentFile('base64:izQp4bEB...')
+#3 [internal function]: Illuminate\Foundation\Console\KeyGenerateCommand->fire()
+#4 /projects/l53/bootstrap/cache/compiled.php(1272): call_user_func_array(Array, Array)
+#5 /projects/l53/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#6 /projects/l53/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /projects/l53/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /projects/l53/vendor/symfony/console/Application.php(820): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /projects/l53/vendor/symfony/console/Application.php(187): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Foundation\Console\KeyGenerateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /projects/l53/vendor/symfony/console/Application.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /projects/l53/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /projects/l53/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2016-10-17 10:29:42] production.ERROR: exception 'ErrorException' with message 'file_get_contents(/projects/l53/.env): failed to open stream: No such file or directory' in /projects/l53/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php:57
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_get_conten...', '/projects/l53/v...', 57, Array)
+#1 /projects/l53/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(57): file_get_contents('/projects/l53/....')
+#2 /projects/l53/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(39): Illuminate\Foundation\Console\KeyGenerateCommand->setKeyInEnvironmentFile('base64:UyeMQq5+...')
+#3 [internal function]: Illuminate\Foundation\Console\KeyGenerateCommand->fire()
+#4 /projects/l53/bootstrap/cache/compiled.php(1272): call_user_func_array(Array, Array)
+#5 /projects/l53/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#6 /projects/l53/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /projects/l53/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /projects/l53/vendor/symfony/console/Application.php(820): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /projects/l53/vendor/symfony/console/Application.php(187): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Foundation\Console\KeyGenerateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /projects/l53/vendor/symfony/console/Application.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /projects/l53/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /projects/l53/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2016-10-17 11:00:42] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "migrate:roolback" is not defined.
+
+Did you mean one of these?
+    migrate:rollback
+    migrate:status
+    migrate:refresh
+    migrate:reset
+    migrate
+    migrate:install' in /projects/l53/vendor/symfony/console/Application.php:536
+Stack trace:
+#0 /projects/l53/vendor/symfony/console/Application.php(184): Symfony\Component\Console\Application->find('migrate:roolbac...')
+#1 /projects/l53/vendor/symfony/console/Application.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /projects/l53/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /projects/l53/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-10-17 11:01:40] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "migrate:roolback" is not defined.
+
+Did you mean one of these?
+    migrate:rollback
+    migrate:status
+    migrate:refresh
+    migrate:reset
+    migrate
+    migrate:install' in /projects/l53/vendor/symfony/console/Application.php:536
+Stack trace:
+#0 /projects/l53/vendor/symfony/console/Application.php(184): Symfony\Component\Console\Application->find('migrate:roolbac...')
+#1 /projects/l53/vendor/symfony/console/Application.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /projects/l53/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /projects/l53/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
