@@ -1,6 +1,6 @@
 <?php
 
-//use App\Notifications\LessonPublished;
+use App\Notifications\LessonPublished;
 use App\Notifications\PaymentRecieved;
 
 /*
@@ -16,10 +16,21 @@ use App\Notifications\PaymentRecieved;
 
 Route::get('/', function () {
     return view('welcome');
-//    $admin = App\User::find(1);
-//    $user = App\User::find(2);
-    
-//    $user->notify(new LessonPublished());
-//    $admin->notify(new PaymentRecieved($user));
-    
 });
+
+Route::get('slack', function () {
+    $admin = App\User::find(1);
+    $user = App\User::find(2);
+    
+    $admin->notify(new PaymentRecieved($user));
+});
+
+Route::get('email', function () {
+    $user = App\User::find(2);
+    
+    $user->notify(new LessonPublished());   
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

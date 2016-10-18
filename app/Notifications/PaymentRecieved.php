@@ -43,7 +43,7 @@ class PaymentRecieved extends Notification
             ->attachment(function ($attachment) {
                  $attachment->title('Payment', url('/payments/1'))
                     ->fields([
-                        'Amount' => '£9.00',
+                        'Amount' => '£19.00',
                         'From'   => $this->user->name
                     ]);
             }); 
