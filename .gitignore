@@ -4,6 +4,3 @@
 /.idea
 Homestead.json
 Homestead.yaml
-.env
-/storage
-/bootstrap/cache

@@ -15,10 +15,11 @@ use App\Notifications\PaymentRecieved;
 */
 
 Route::get('/', function () {
-    $admin = App\User::find(1);
-    $user = App\User::find(2);
+    return view('welcome');
+//    $admin = App\User::find(1);
+//    $user = App\User::find(2);
     
 //    $user->notify(new LessonPublished());
-    $admin->notify(new PaymentRecieved($user));
+//    $admin->notify(new PaymentRecieved($user));
     
 });
