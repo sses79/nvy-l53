@@ -1,0 +1,1 @@
+[19-Oct-2016 11:57:09 UTC] PHP Fatal error:  Call to a member function notify() on null in /home/ubuntu/workspace/nvy-l53/routes/web.php on line 25
